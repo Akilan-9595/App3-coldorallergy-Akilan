@@ -49,7 +49,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+	
+	// Allergy vs Cold Percentage //
+	result.Text.innerHTML = "Prabability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	
+	}
+	
   </script>
 
 
@@ -144,7 +149,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    z-index: 5;
 
 /* NUMERICAL RESULTS PAGE */
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
 	
+	.page:target {
+	    left: 0vw;
+	    z-index: 6;	
 
 
 </style>
@@ -231,7 +249,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chrnoic?</p>
 		
 	<!-- YES Button -->	
-	<a href="#five" onclick="allergyAdd();" onclass="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
 	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
@@ -242,12 +260,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- RESULTS BUTTON PAGE -->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		
 	</div>
 			
 	<!-- RESULTS Button -->	
 	<a href="#six" onclick=onclass="w3-btn w3-grey w3-round w3-border w3-border-white"> Results </a>
+	</div>
 
+</div>
+	
+
+<!-- NUMERICAL RESULTS PAGE -->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<!-- Variable Results Section -->
+	<p id="results"></p>
+	
+	
+
+</div>
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
