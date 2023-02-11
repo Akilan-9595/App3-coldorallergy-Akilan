@@ -39,10 +39,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//starting counters before survey is filled out set to 0//
         var allergy_count = 0;
         var cold_count = 0;
-	var allergyPercent = 0
-	var coldPercent = 0
+	
+	//caluclating percentages of cold vs allergy//
+	var allergyPercent = (allergy_count) / 4;
+	var coldPercent = (cold_count) / 4;
+	
 	//for displaying the results//
-	var resultText = document.getElementByld("results")
+	var resultText = document.getElementByld("results");
 	
 	//changed counter to go up by 0.25 to more easily display percentage//
         function allergyAdd(){
@@ -54,7 +57,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 0.25;
         }
 	
-	// Allergy vs Cold Percentage //
+	// Allergy vs Cold Percentage text //
 	resultText.innerHTML = "Prabability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 	
 	}
