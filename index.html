@@ -127,6 +127,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    z-index: 4;
 }
 
+/* Results BUTTON Page */
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+	
+	.page:target {
+	    left: 0vw;
+	    z-index: 5;
+
+/* NUMERICAL RESULTS PAGE */
+	
+
 
 </style>
 
@@ -220,7 +239,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </div>
 
-<!-- RESULTS PAGE -->
+<!-- RESULTS BUTTON PAGE -->
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+			
+	<!-- RESULTS Button -->	
+	<a href="#six" onclick=onclass="w3-btn w3-grey w3-round w3-border w3-border-white"> Results </a>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
