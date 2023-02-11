@@ -40,10 +40,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var allergy_count = 0;
         var cold_count = 0;
 	
-	//caluclating percentages of cold vs allergy//
-	var allergyPercent = (allergy_count) / 4;
-	var coldPercent = (cold_count) / 4;
-	
 	//for displaying the results//
 	var resultText = document.getElementById("results");
 	
@@ -56,13 +52,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-	
-	// Allergy vs Cold Percentage text //
-	resultText.innerHTML = "Prabability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	//allergy percentage//
+	function allergyPercent(){
+		allergy_count = (allergy_count) / 4;
+	}
+	//cold percentage//
+	function coldPercent(){
+		cold_count = (cold_count) / 4;
+	}
+	// Allergy vs Cold Percentage text with functions instead of variables in the changing HTML //
+	resultText.innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();
 	
 	}
-	//testing to see if this will allow the results to display//
-	console.log ("Prabability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent);
 	
   </script>
 
@@ -273,7 +274,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 			
 	<!-- RESULTS Button -->	
-	<a href="#six" onclick= class="w3-btn w3-grey w3-round w3-border w3-border-white"> Results </a>
+	<a href="#six" onclick="allergyPercent(); coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Results </a>
 	</div>
 
 </div>
