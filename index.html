@@ -92,6 +92,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    left: 0vw;
 	    z-index: 2;
 }
+	
+/* Page Three Styling */
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+	
+	.page:target {
+	    left: 0vw;
+	    z-index: 3;
+}
+
+/* Page Four Styling */
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+	
+	.page:target {
+	    left: 0vw;
+	    z-index: 4;
+}
+
+
 </style>
 
 <body>
@@ -157,10 +193,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 		
 	<!-- YES Button -->	
-	<a href="#three" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#four" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#three" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#four" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 
 </div>
@@ -176,13 +212,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chrnoic?</p>
 		
 	<!-- YES Button -->	
-	<a href="#three" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#five" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#three" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#five" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 
-	
+</div>
+
+<!-- RESULTS PAGE -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
