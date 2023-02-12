@@ -51,14 +51,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//counter goes up by 1 //
         function coldAdd(){
             cold_count = cold_count + 1;
+		
         }
 	//allergy percentage//
 	function allergyPercent(){
 		allergy_count = (allergy_count) / 4;
+		
 	}
 	//cold percentage//
 	function coldPercent(){
 		cold_count = (cold_count) / 4;
+		
 	}
 	// Allergy vs Cold Percentage text with functions instead of variables in the changing HTML //
 	resultText.innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();
@@ -267,25 +270,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </div>
 
-<!-- RESULTS BUTTON PAGE -->
+<!-- RESULTS BUTTON PAGE 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		
 	</div>
 			
-	<!-- RESULTS Button and also removed the functions for calculating the averages -->	
+	<!-- RESULTS Button and also removed the functions for calculating the averages 	
 	<a href="#six" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Results </a>
 	</div>
 
-</div>
+</div> -->
 	
-
+<!-- Made the results button on the same page as the display results page... ignore the comment above --> 
 <!-- NUMERICAL RESULTS PAGE -->
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
+	<input type="button" onclick="allergyPercent();" onclick="coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Result </a>
 	<!-- Variable Results Section -->
 	<p id="results">Score</p>
 	
