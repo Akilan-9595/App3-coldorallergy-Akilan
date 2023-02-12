@@ -61,6 +61,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		let y = x / 4;
 		console.log("y")
 		
+		cold_count = Number(cold_count) / 4;
+		let a = cold_count
+		let b = a / 4;
+		console.log("b")
+		
 	}
 	//cold percentage.....added variables to the functions//
 	function coldPercent(){
@@ -231,10 +236,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a fever?.</p>
 		
 	<!-- YES Button -->	
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#three" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#three" onclick.call="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 	
 </div>
@@ -250,10 +255,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 		
 	<!-- YES Button -->	
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#four" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#four" onclick.call="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 
 </div>
@@ -269,10 +274,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		
 	<!-- YES Button -->	
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#five" onclick.call="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#five" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 
 </div>
@@ -297,7 +302,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<!-- Results Button.... changed name of results button to "results"-->
-	<input type="button" onclick="allergyPercent();" onclick="coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> results </a>
+	<input type="button" onclick.call="allergyPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> results </a>
 	<!-- Variable Results Section -->
 	<div id="results">Score</div>
 	<script type ="text/javascript">
@@ -306,7 +311,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         	document.getElementById('results').innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();
    		 };
 	</script>
-	<p id="results">Score</p>
+	<!--<p id="results">Score</p>-->
 	
 	</div>
 
