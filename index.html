@@ -234,7 +234,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#three" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#three" onlick="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 	
 </div>
@@ -299,6 +299,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- Results Button.... changed name of results button to "results"-->
 	<input type="button" onclick="allergyPercent();" onclick="coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> results </a>
 	<!-- Variable Results Section -->
+	<div id="results">Score</div>
+	<script type ="text/javascript">
+   		 what();
+    		function what(){
+        	document.getElementById('results').innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();
+   		 };
+	</script>
 	<p id="results">Score</p>
 	
 	</div>
