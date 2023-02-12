@@ -41,7 +41,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	
 	//for displaying the results//
-	var resultText = document.getElementById("results");
+	//var resultText = document.getElementById("results");
 	
 	// counter goes up by 1//
         function allergyAdd(){
@@ -59,20 +59,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function allergyPercent(){
 		let x = allergy_count
 		let y = x / 4;
-		console.log("y")
-		
-		cold_count = Number(cold_count) / 4;
-		let a = cold_count
-		let b = a / 4;
-		console.log("b")
-		
+		console.log(y)
+				
 	}
 	//cold percentage.....added variables to the functions//
 	function coldPercent(){
 		cold_count = Number(cold_count) / 4;
 		let a = cold_count
 		let b = a / 4;
-		console.log("b")
+		console.log(b)
 		
 	}
 	// Allergy vs Cold Percentage text with functions instead of variables in the changing HTML //
@@ -302,12 +297,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<!-- Results Button.... changed name of results button to "results"-->
-	<input type="button" onclick.call="allergyPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> results </a>
+	<input type="button" onclick.call="allergyPercent(); coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Result"> 
 	<!-- Variable Results Section -->
 	<div id="results">Score</div>
 	<script type ="text/javascript">
-   		 what();
-    		function what(){
+   		displayResult();
+    		function displayResult(){
         	document.getElementById('results').innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();
    		 };
 	</script>
