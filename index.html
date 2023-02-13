@@ -312,26 +312,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="coldresults"></div>
 	
 	<!--Back to First Page Button-->
-	<form>
-	<input type="Restart" onclick="history.go(-5); reset()" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Restart">
-	</form>
+	<input type="Restart" onclick="history.go(-5); resetvalues()"  class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Restart">
 	
+	<div id="Resetting"></div>
 	</div>
 
 </div>
 
 <!-- Reset Values of counters and calculators -->
-<script>
 //set all values back to 0//
-    function= reset(){
-    x = 0;
-    y = 0;
-    a = 0;
-    b = 0;
-
-   }
-</script>
-	
+  
+<script>  
+ function resetvalues(){  
+   document.getElementById("Resetting").reset();  
+ }   
+</script>  
+ 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
