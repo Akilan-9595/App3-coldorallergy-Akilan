@@ -41,25 +41,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	
 	//for displaying the results//
-	//var resultText = document.getElementById("results");
+	var resultText = document.getElementById("results");
 	
-	// counter goes up by 1//
+	// counter goes up by 1...added allergy counter to make sure function works//
         function allergyAdd(){
 		allergy_count = allergy_count + 1;
-		console.log(allergy_count)
+		console.log(allergy_count);
+		alert(allergy_count);
 		
         }
 	//counter goes up by 1 //
         function coldAdd(){		
             	cold_count = cold_count + 1;
-		console.log(cold_count)
+		console.log(cold_count);
+		alert(cold_count)
 				
         }
-	//allergy percentage.......added variables to the functions//
+	//allergy percentage.......added variables to the functions...added counter to make sure it works//
 	function allergyPercent(){
 		let x = allergy_count
 		let y = x / 4;
 		console.log(y)
+		alert(y)
 				
 	}
 	//cold percentage.....added variables to the functions//
@@ -68,6 +71,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		let a = cold_count
 		let b = a / 4;
 		console.log(b)
+		alert(b)
 		
 	}
 	// Allergy vs Cold Percentage text with functions instead of variables in the changing HTML //
@@ -306,7 +310,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         	document.getElementById('results').innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();
    		 };
 	</script>
-	<!--<p id="results">Score</p>-->
+	<p id="results">resultText.innerHTML = "Prabability it is allergies =" + allergyPercent() + "<br> Probability it is a cold =" + coldPercent();</p>
 	
 	</div>
 
