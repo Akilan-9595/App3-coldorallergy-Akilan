@@ -47,37 +47,35 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
 		allergy_count = allergy_count + 1;
 		console.log(allergy_count);
-		alert(allergy_count);
+		alert("allergycount" + allergy_count);
 		
         }
 	//counter goes up by 1 //
         function coldAdd(){		
             	cold_count = cold_count + 1;
 		console.log(cold_count);
-		alert(cold_count)
+		alert("coldcount" + cold_count);
 				
         }
 	//allergy percentage.......added variables to the functions...added counter to make sure it works//
 	function allergyPercent(){
-		let x = allergy_count
+		let x = allergy_count;
 		let y = (x / 4)*100;
-		console.log(y)
-		alert(y)
+		console.log(y);
+		alert("allergypercent" + y);
 				
 	}
 	//cold percentage.....added variables to the functions//
 	function coldPercent(){
 		cold_count = Number(cold_count) / 4;
-		let a = cold_count
+		let a = cold_count;
 		let b = (a / 4)*100;
-		console.log(b)
-	        alert(b)
+		console.log(b);
+	        alert("coldpercent" + b)
 		
 	}
 	// Allergy vs Cold Percentage text with functions instead of variables in the changing HTML //
 	resultText.innerHTML = "Prabability it is allergies =" + y + "<br> Probability it is a cold =" + y
-	
-	}
 	
 	
 	
@@ -218,10 +216,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         	<p>Are your eyes watery or itchy?</p>
 
 	<!-- YES Button -->	
-	<a href="#two" onclick.call="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!--NO Button -->
-	<a href="#two" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 		
     	</div>	
 </div>
@@ -237,10 +235,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a fever?.</p>
 		
 	<!-- YES Button -->	
-	<a href="#three" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#three" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#three" onclick.call="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 	
 </div>
@@ -256,10 +254,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 		
 	<!-- YES Button -->	
-	<a href="#four" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#four" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#four" onclick.call="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 
 </div>
@@ -275,10 +273,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Are your symptoms seasonal or chronic?</p>
 		
 	<!-- YES Button -->	
-	<a href="#five" onclick.call="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
 	
 	<!-- NO Button -->
-	<a href="#five" onclick.call="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	</div>
 
 </div>
