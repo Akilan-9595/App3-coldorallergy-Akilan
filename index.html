@@ -222,11 +222,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!--NO Button -->
 	<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
-	
-	<!--Back Button-->
-	<form>
- 	<input type="button" onclick="history.back();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Previous Question">
-	</form>
 		
     	</div>	
 </div>
@@ -246,11 +241,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!-- NO Button -->
 	<a href="#three" onclick="allergyAdd();"class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
-		
-	<!--Back Button-->
-	<form>
- 	<input type="button" onclick="history.back();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Previous Question">
-	</form>
 		
 	</div>
 	
@@ -272,11 +262,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- NO Button -->
 	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 		
-	<!--Back Button-->
-	<form>
- 	<input type="button" onclick="history.back();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Previous Question">
-	</form>
-		
 	</div>
 
 </div>
@@ -297,12 +282,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- NO Button -->
 	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
 	
-	
-	<!--Back Button-->
-	<form>
- 	<input type="button" onclick="history.back();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Previous Question">
-	</form>
-		
 	</div>
 
 </div>
@@ -332,19 +311,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="allergyresults"></div>
 	<div id="coldresults"></div>
 	
-	<!--Back Button-->
-	<form>
- 	<input type="button" onclick="history.back();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Previous Question">
-	</form>
-	
 	<!--Back to First Page Button-->
 	<form>
-	<input type="button" onclick="history.go(-5);" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Restart">
+	<input type="Restart" onclick="history.go(-5); reset()" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Restart">
 	</form>
 	
 	</div>
 
 </div>
+
+<!-- Reset Values of counters and calculators -->
+<script>
+//set all values back to 0//
+    function= reset(){
+    x = 0;
+    y = 0;
+    a = 0;
+    b = 0;
+
+   }
+</script>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
