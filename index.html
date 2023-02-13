@@ -67,15 +67,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}
 	//cold percentage.....added variables to the functions//
 	function coldPercent(){
-		cold_count = Number(cold_count) / 4;
 		let a = cold_count;
 		let b = (a / 4)*100;
 		console.log(b);
 	        alert("coldpercent" + b)
 		
 	}
-	// Allergy vs Cold Percentage text with functions instead of variables in the changing HTML //
-	resultText.innerHTML = "Prabability it is allergies =" + y + "<br> Probability it is a cold =" + y
+	
+	//display results function...moved display results here//
+	function displayresults(){
+		document.getElementById("results").innerHTML = "Prabability it is allergies =" + b + " Probability it is a cold =" + y;
+	
+	}
+	
+
 	
 	
 	
@@ -301,7 +306,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<!-- Results Button.... changed name of results button to "results"-->
-	<input type="button" onclick="allergyPercent(); coldPercent();" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Result"> 
+	<input type="button" onclick="allergyPercent(); coldPercent(); displayresults()" class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Result"> 
 	<!-- Variable Results Section -->
 	<div id="results">Score</div>
 		
