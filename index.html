@@ -60,7 +60,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//allergy percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
 	function allergyPercent(){
 		let x = allergy_count;
-		let y = (x / 4)*100;
+		let y = (x / 6)*100;
 		console.log(y);
 		alert("allergypercent" + y);
 		document.getElementById("allergyresults").innerHTML = "Probability it is allergies =" + y + "%";
@@ -69,7 +69,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//cold percentage.....added variables to the functions......added counter to make sure it works....added the innerhtml to the function//
 	function coldPercent(){
 		let a = cold_count;
-		let b = (a / 4)*100;
+		let b = (a / 6)*100;
 		console.log(b);
 	        alert("coldpercent" + b)
 		document.getElementById("coldresults").innerHTML = "Prabobility it is allergies =" + b + "%";
@@ -158,7 +158,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    z-index: 4;
 }
 
-/* Results BUTTON Page (PAGE 5)*/
+/* Page Five Styling (PAGE 5)*/
 .page {
     width: 100vw;
     height: 100vh;
@@ -174,7 +174,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    left: 0vw;
 	    z-index: 5;
 
-/* NUMERICAL RESULTS PAGE (PAGE 6)*/
+/* Page Six Styling (PAGE 6)*/
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+	
+	.page:target {
+	    left: 0vw;
+	    z-index: 5;
+
+/* NUMERICAL RESULTS PAGE (PAGE 7)*/
 .page {
     width: 100vw;
     height: 100vh;
@@ -190,10 +206,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    left: 0vw;
 	    z-index: 6;	
 
+	
+
 
 </style>
 
 <body>
+<!-- Title Page -->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div>
@@ -286,6 +305,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </div>
 
+<!-- PAGE Five -->
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<!-- Fifth Question -->
+	<div id="content" class="w3-container">
+		<p>Do you have a wet, hacking cough?</p>
+		
+	<!-- YES Button -->	
+	<a href="#six" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	
+	<!-- NO Button -->
+	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	
+	</div>
+
+<!-- PAGE Six -->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<!-- Sixth Question -->
+	<div id="content" class="w3-container">
+		<p>Do you have a wet, hacking cough?</p>
+		
+	<!-- YES Button -->	
+	<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> Yes </a>
+	
+	<!-- NO Button -->
+	<a href="#seven" onclick="coldAdd();" class="w3-btn w3-grey w3-round w3-border w3-border-white"> No </a>
+	
+	</div>
+
 <!-- RESULTS BUTTON PAGE 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
@@ -299,8 +354,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div> -->
 	
 <!-- Made the results button on the same page as the display results page... ignore the comment above --> 
+	
 <!-- NUMERICAL RESULTS PAGE -->
-<div class="page" id="five">
+<div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
@@ -312,25 +368,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="coldresults"></div>
 	
 	</div>
-	<!--Back to First Page Button-->
+	<!--Back to First Page Button
 	<input type="Restart" onclick="history.go(-5); resetvalues();"  class="w3-btn w3-grey w3-round w3-border w3-border-white" value="Restart">
 	
 	<div id="Resetting"></div>
-	</div>
+	</div>-->
 
 </div>
 
-<!-- Reset Values of counters and calculators -->
-//set all values back to 0//
-  
-<script>  
- function resetvalues(){  
-   document.getElementById("Resetting").reset();  
- }   
-</script>  
+	
  
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
 </footer>
 
 </body>
