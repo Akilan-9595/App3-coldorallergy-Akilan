@@ -47,14 +47,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
 		allergy_count = allergy_count + 1;
 		console.log(allergy_count);
-		alert("allergycount" + allergy_count);
+		//alert("allergycount" + allergy_count);//
 		
         }
 	//counter goes up by 1 //
         function coldAdd(){		
             	cold_count = cold_count + 1;
 		console.log(cold_count);
-		alert("coldcount" + cold_count);
+		//alert("coldcount" + cold_count);//
 				
         }
 	//allergy percentage.......added variables to the functions...added counter to make sure it works....added the innerhtml to the function//
@@ -62,7 +62,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		let x = allergy_count;
 		let y = (x / 6)*100;
 		console.log(y);
-		alert("allergypercent" + y);
+		//alert("allergypercent" + y);//
 		document.getElementById("allergyresults").innerHTML = "Probability it is allergies =" + y + "%";
 				
 	}
@@ -71,7 +71,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		let a = cold_count;
 		let b = (a / 6)*100;
 		console.log(b);
-	        alert("coldpercent" + b)
+	        //alert("coldpercent" + b)//
 		document.getElementById("coldresults").innerHTML = "Prabobility it is allergies =" + b + "%";
 		
 	}
